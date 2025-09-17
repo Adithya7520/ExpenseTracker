@@ -1,32 +1,61 @@
+/* Base CSS Reset & Defaults */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Define CSS variables for colors, spacing, etc. if needed */
+  --primary-color: #252422;
+  --secondary-color: #c17658;
+  --font-family-base:  "Poppins", sans-serif;
+  --body-bg: #252422;
+  --body-color: #212529;
+  --primary-font-color:#252422;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  font-size: 16px; /* Bootstrap default */
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--font-family-base);
+  background-color: var(--body-bg);
+  color: var(--primary-font-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
+/* Optional: Smooth image scaling and responsive behavior */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optional: Set up base link styling */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input.form-control {
+  font-size: 16px;
+  font-weight: 400;
+  height: 32px;
+
+}

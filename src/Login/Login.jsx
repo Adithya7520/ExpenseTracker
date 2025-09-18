@@ -5,23 +5,32 @@ import "./Login.css"
 function Login() {
   return (
     <div className='login-container'>
-        <h5>Welcome back</h5>
-        <p>Please sign in to continue</p>
-        <div className='login-input'>
-            <div>
-            <label>Email</label>
-            <input type='email' placeholder='Enter Email' className='form-control' />
-            </div>
-            <div>
-            <label>Password</label>
-            <input type='password' placeholder='Enter password' className='form-control'/>
-           </div>
+      <div>
+        <div className='login-userIcon'>
+          <i class="fa-regular fa-user"></i>
         </div>
+      </div>
+      <div className='flex-vertical text-center'>
+        <h4>Welcome back</h4>
+        <p>Please sign in to continue</p>
+        </div>
+        <div className='login-input'>
+  <div className='input-with-icon'>
+    <i className='fas fa-envelope icon'></i>
+    <input type='email' placeholder='Email address' className='form-control input-field' />
+  </div>
+  <div className='input-with-icon'>
+    <i className='fas fa-lock icon'></i>
+    <input type='password' placeholder='Password' className='form-control input-field' />
+  </div>
+</div>
+
         <div>
-            <button className='btn-login'>Login</button>
+            <button className='btn-login'>Sign In</button>
         </div>
         <div className='login-createAcc'>Don't have an account?
-            {/* <Link to=""> Create Account</Link> */}
+            <br/>
+            {/* <Link to="/register">Sign up</Link> */}
             </div>
     </div>
   )
